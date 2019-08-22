@@ -97,7 +97,8 @@
       height: 0;
       padding-bottom: 45%;
     }
-    margin-top: .1rem /* 5/50 */;
+    padding-top: .1rem /* 5/50 */;
+    background: $white;
     &-item {
       overflow: hidden;
       float: left;
