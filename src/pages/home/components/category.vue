@@ -94,8 +94,7 @@
 
   .category {
     >>> .swiper-container {
-      height: 0;
-      padding-bottom: 45%;
+      height: 3.7rem /* 185/50 */;
     }
     padding-top: .1rem /* 5/50 */;
     background: $white;
