@@ -55,7 +55,7 @@
     overflow: hidden;
     width: 100%;
     height: 0;
-    padding-bottom: 27%;
+    padding-bottom: 26.67%;
     background: $grey;
 
     >>>.swiper-pagination-bullet-active {
