@@ -9,12 +9,11 @@
         输入城市/景点/游玩主题
       </a>
     </div>
-    <div class="header-right">
-      <a href="#">
-        城市
-        <i class="iconfont arrow-icon">&#xe64a;</i>
-      </a>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        城市<i class="iconfont arrow-icon">&#xe64a;</i>
+      </div>
+    </router-link>
   </div>
 </template>
 <script>
@@ -62,13 +61,11 @@
       height: 100%;
       width: 1.24rem /* 62/50 */;
       text-align: center;
+      color: $white;
 
-      a {
-        color: $white;
-        .arrow-icon {
-          margin-left: -.04rem /* 2/50 */;
-          font-size: .24rem /* 12/50 */;
-      }
+      .arrow-icon {
+        margin-left: .04rem /* 2/50 */;
+        font-size: .24rem /* 12/50 */;
       }
     }
   }
