@@ -10,7 +10,7 @@
     </div>
     <ul class="list">
       <router-link tag="li"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
         :to="'/detail/' + item.id"
         class="item border-bottom"
@@ -29,45 +29,8 @@
 <script>
   export default {
     name: 'HomeRecommend',
-    data() {
-      return {
-        recommendList: [{
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1908/b2/b203b56652a9a7d7a3.img.jpg_250x250_0a4d613f.jpg',
-          title: '中华恐龙园',
-          price: '97'
-        }, {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1908/b2/b203b56652a9a7d7a3.img.jpg_250x250_0a4d613f.jpg',
-          title: '中华恐龙园',
-          price: '97'
-        }, {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1908/b2/b203b56652a9a7d7a3.img.jpg_250x250_0a4d613f.jpg',
-          title: '中华恐龙园',
-          price: '97'
-        }, {
-          id: '0004',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1908/b2/b203b56652a9a7d7a3.img.jpg_250x250_0a4d613f.jpg',
-          title: '中华恐龙园',
-          price: '97'
-        }, {
-          id: '0005',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1908/b2/b203b56652a9a7d7a3.img.jpg_250x250_0a4d613f.jpg',
-          title: '中华恐龙园',
-          price: '97'
-        }, {
-          id: '0006',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1908/b2/b203b56652a9a7d7a3.img.jpg_250x250_0a4d613f.jpg',
-          title: '中华恐龙园',
-          price: '97'
-        }, {
-          id: '0007',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1908/b2/b203b56652a9a7d7a3.img.jpg_250x250_0a4d613f.jpg',
-          title: '中华恐龙园',
-          price: '97'
-        }]
-      };
+    props: {
+      list: Array
     }
   };
 </script>

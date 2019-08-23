@@ -4,7 +4,7 @@
       <h2>周末去哪儿</h2>
     </div>
     <ul class="list">
-      <li v-for="item of weekendList"
+      <li v-for="item of list"
         :key="item.id"
         class="item border-bottom"
       >
@@ -24,28 +24,8 @@
 <script>
   export default {
     name: 'HomeWeekend',
-    data() {
-      return {
-        weekendList: [{
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/74/fd61f19f3f1cc1.jpg_r_640x214_6ebc0c51.jpg',
-          linkUrl: 'http://piao.qunar.com/touch/toSku.htm?skuId=292&skuName=觅龙城的故事&cat=from_area%3Dts_sku%26from_index%3D0%26from_value%3D%25E8%25A7%2585%25E9%25BE%2599%25E5%259F%258E%25E7%259A%2584%25E6%2595%2585%25E4%25BA%258B%26dist_city%3D%25E5%25B8%25B8%25E5%25B7%259E',
-          title: '觅龙城的故事',
-          desc: '两千多年历史的常州，道不尽悠悠历史'
-        }, {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/74/fd61f19f3f1cc1.jpg_r_640x214_6ebc0c51.jpg',
-          linkUrl: 'http://piao.qunar.com/touch/toSku.htm?skuId=292&skuName=觅龙城的故事&cat=from_area%3Dts_sku%26from_index%3D0%26from_value%3D%25E8%25A7%2585%25E9%25BE%2599%25E5%259F%258E%25E7%259A%2584%25E6%2595%2585%25E4%25BA%258B%26dist_city%3D%25E5%25B8%25B8%25E5%25B7%259E',
-          title: '觅龙城的故事',
-          desc: '两千多年历史的常州，道不尽悠悠历史'
-        }, {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/74/fd61f19f3f1cc1.jpg_r_640x214_6ebc0c51.jpg',
-          linkUrl: 'http://piao.qunar.com/touch/toSku.htm?skuId=292&skuName=觅龙城的故事&cat=from_area%3Dts_sku%26from_index%3D0%26from_value%3D%25E8%25A7%2585%25E9%25BE%2599%25E5%259F%258E%25E7%259A%2584%25E6%2595%2585%25E4%25BA%258B%26dist_city%3D%25E5%25B8%25B8%25E5%25B7%259E',
-          title: '觅龙城的故事',
-          desc: '两千多年历史的常州，道不尽悠悠历史'
-        }]
-      };
+    props: {
+      list: Array
     }
   };
 </script>
