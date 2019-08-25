@@ -10,7 +10,7 @@
     <div class="list">
       <h2>当前城市</h2>
       <div class="mp-list">
-        <div class="item  current mp-tr3">常州</div>
+        <div class="item  current mp-tr3">{{this.currentCity}}</div>
       </div>
       <h2>热门城市</h2>
       <ul class="mp-list">
@@ -28,6 +28,7 @@
         <li class="item mp-tr6"
           v-for="(item, key) of cities"
           :key="key"
+          @click="handleLetterClick"
         >
           {{key}}
         </li>
@@ -53,6 +54,7 @@
 </template>
 <script>
   import BScroll from '@better-scroll/core';
+  import { mapState, mapMutations } from 'vuex';
 
   export default {
     name: 'CityList',
@@ -61,10 +63,20 @@
       cities: Object,
       letter: String
     },
+    computed: {
+      ...mapState({
+        currentCity: 'city'
+      })
+    },
     methods: {
       handleCityClick(city) {
+        this.changeCity(city);
         this.$router.push('/');
-      }
+      },
+      handleLetterClick(e) {
+        this.$emit('change', e.target.innerText);
+      },
+      ...mapMutations(['changeCity'])
     },
     watch: {
       letter() {

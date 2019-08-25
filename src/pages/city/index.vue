@@ -6,6 +6,7 @@
       :cities="cities"
       :hot="hotCities"
       :letter="letter"
+      @change="handleLetterChange"
     />
     <city-alphabet
       :cities="cities"
