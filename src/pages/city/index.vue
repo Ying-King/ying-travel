@@ -42,7 +42,7 @@
     },
     methods: {
       getCityInfo() {
-        axios.get('/api/city.json').then(this.handleGetCityInfoSucc);
+        axios.get('http://yapi.demo.qunar.com/mock/90995/api/city').then(this.handleGetCityInfoSucc);
       },
       handleGetCityInfoSucc(res) {
         res = res.data;

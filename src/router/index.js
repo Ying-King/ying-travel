@@ -24,5 +24,8 @@ export default new Router({
       path: '*',
       redirect: '/home'
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) { // 当切换到新路由时，页面滚到顶部
+    return { x: 0, y: 0 }; // 期望滚动到哪个的位置
+  }
 });

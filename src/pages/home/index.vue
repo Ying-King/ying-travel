@@ -47,7 +47,7 @@
     },
     methods: {
       getHomeInfo() {
-        axios.get('/api/index.json?city=' + this.city).then(this.getHomeInfoSucc);
+        axios.get('http://yapi.demo.qunar.com/mock/90995/api/index?city=' + this.city).then(this.getHomeInfoSucc);
         axios.post(recommendUrl, recommendParams).then((res) => {
           res = res.data;
           this.recommendList = res.tokenContentList[0].productInfoList;

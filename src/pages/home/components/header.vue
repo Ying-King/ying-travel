@@ -4,7 +4,7 @@
       <a class="iconfont back-icon" href="#">&#xe624;</a>
     </div>
     <div class="header-input">
-      <a href="#">
+      <a href="http://piao.qunar.com/touch/list_%E5%B8%B8%E5%B7%9E.html?isSearch=1&cityName=%E5%B8%B8%E5%B7%9E">
         <i class="iconfont">&#xe632;</i>
         输入城市/景点/游玩主题
       </a>
