@@ -1,6 +1,6 @@
 <template>
   <div>
-    <loading v-show="!recommendList.length"/>
+    <loading v-show="!recommendList.length && !swiperList.length"/>
     <home-header />
     <home-swiper :list="swiperList"/>
     <home-category :list="categoryList"/>
@@ -47,7 +47,7 @@
     },
     methods: {
       getHomeInfo() {
-        axios.get('http://yapi.demo.qunar.com/mock/90995/api/index?city=' + this.city).then(this.getHomeInfoSucc);
+        axios.get('https://ying-king.github.io/data-mock/ying-travel/index.json?city=' + this.city).then(this.getHomeInfoSucc);
         axios.post(recommendUrl, recommendParams).then((res) => {
           res = res.data;
           this.recommendList = res.tokenContentList[0].productInfoList;

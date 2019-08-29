@@ -42,7 +42,7 @@
     },
     methods: {
       getCityInfo() {
-        axios.get('http://yapi.demo.qunar.com/mock/90995/api/city').then(this.handleGetCityInfoSucc);
+        axios.get('https://ying-king.github.io/data-mock/ying-travel/city.json').then(this.handleGetCityInfoSucc);
       },
       handleGetCityInfoSucc(res) {
         res = res.data;

@@ -8,7 +8,6 @@
 - 插件：vue-awesome-swiper + better-scroll + fastClick + babel-polyfill
 - SASS 高效编写 CSS
 - Ajax：axios 获取数据
-- Api：Yapi 数据接口
 
 ## 2. 功能模块
 
