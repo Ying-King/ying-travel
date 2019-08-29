@@ -26,7 +26,7 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'semi': ['error', 'always'],
-    'indent': 'off',
+    'indent': ['off', 2],
     'vue/script-indent': ['error', 2, {'baseIndent': 1}],
     'space-before-function-paren': ['error', {'anonymous': 'always', 'named': 'never', 'asyncArrow': 'always'}]
   }

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <loading v-show="!recommendList.length"/>
     <home-header />
     <home-swiper :list="swiperList"/>
     <home-category :list="categoryList"/>
@@ -16,9 +17,11 @@
   import HomeCategory from './components/category';
   import HomeRecommend from './components/recommend';
   import HomeWeekend from './components/weekend';
+  import Loading from 'common/loading';
 
   import axios from 'axios';
   import { mapState } from 'vuex';
+  import {recommendUrl, recommendParams} from 'assets/js/config';
 
   export default {
     name: 'Home',
@@ -27,7 +30,8 @@
       HomeSwiper,
       HomeCategory,
       HomeRecommend,
-      HomeWeekend
+      HomeWeekend,
+      Loading
     },
     data() {
       return {
@@ -44,6 +48,11 @@
     methods: {
       getHomeInfo() {
         axios.get('/api/index.json?city=' + this.city).then(this.getHomeInfoSucc);
+        axios.post(recommendUrl, recommendParams).then((res) => {
+          res = res.data;
+          this.recommendList = res.tokenContentList[0].productInfoList;
+          console.log(this.recommendList);
+        });
       },
       getHomeInfoSucc(res) {
         res = res.data;
@@ -51,10 +60,9 @@
           const data = res.data;
           this.swiperList = data.swiperList;
           this.categoryList = data.categoryList;
-          this.recommendList = data.recommendList;
           this.weekendList = data.weekendList;
         }
-        console.log(res);
+        console.log(res.data);
       }
     },
     mounted() {

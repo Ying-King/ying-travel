@@ -1,5 +1,6 @@
 <template>
   <div>
+    <loading v-show="!hotCities.length"/>
     <city-header />
     <city-search :cities="cities"/>
     <city-list
@@ -19,6 +20,7 @@
   import CitySearch from './components/search';
   import CityList from './components/list';
   import CityAlphabet from './components/alphabet';
+  import Loading from 'common/loading';
 
   import axios from 'axios';
 
@@ -28,7 +30,8 @@
       CityHeader,
       CitySearch,
       CityList,
-      CityAlphabet
+      CityAlphabet,
+      Loading
     },
     data() {
       return {

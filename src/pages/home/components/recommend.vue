@@ -12,13 +12,13 @@
       <router-link tag="li"
         v-for="item of list"
         :key="item.id"
-        :to="'/detail/' + item.id"
+        :to="{name: 'Detail',params: {id: item.productId}}"
         class="item border-bottom"
       >
           <div class="item-img">
             <img :src="item.imgUrl" alt="">
           </div>
-          <p class="item-title">{{item.title}}</p>
+          <p class="item-title">{{item.name}}</p>
           <div class="item-desc">
             <span class="item-price">¥<em class="item-price-num">{{item.price}}</em>起</span>
           </div>
@@ -83,14 +83,14 @@
         display: inline-block;
         box-sizing: border-box;
         padding: .06rem /* 3/50 */ .1rem /* 5/50 */ .2rem /* 10/50 */ 0;
-        width: 2rem /* 100/50 */;
+        width: 3rem /* 150/50 */;
         font-size: $defaultFont;
         text-align: center;
 
         &-img {
           overflow: hidden;
           height: 0;
-          padding-bottom: 100%;
+          padding-bottom: 64%;
 
           img {
             width: 100%;
