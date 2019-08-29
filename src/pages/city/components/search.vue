@@ -76,7 +76,11 @@
       ...mapMutations(['changeCity'])
     },
     updated() {
-      this.scroll = new BScroll(this.$refs.result);
+      this.scroll = new BScroll(this.$refs.result, {
+        mouseWheel: true,
+        click: true,
+        tap: true
+      });
     }
   };
 

@@ -90,7 +90,10 @@
       // better-scroll 初始化
       if (this.$refs.hot) {
         this.scroll = new BScroll(this.$refs.wrapper, {
-          scrollY: true
+          scrollY: true,
+          mouseWheel: true,
+          click: true,
+          tap: true
         });
         console.log(this.scroll);
       }
