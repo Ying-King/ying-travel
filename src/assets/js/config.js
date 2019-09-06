@@ -1,9 +1,8 @@
-export const recommendUrl = 'https://sec-m.ctrip.com/restapi/soa2/16035/getContent?_fxpcqlniredt=09031107111172577019';
+export const recommendUrl = 'https://m.ctrip.com/tangram/restapi/gateway/16035/getContent?_fxpcqlniredt=09031107111172577019';
 export const detailInfoUrl = 'https://sec-m.ctrip.com/restapi/soa2/12530/json/scenicSpotDetails?_fxpcqlniredt=09031107111172577019';
 export const detailImgUrl = 'https://sec-m.ctrip.com/restapi/soa2/12530/json/viewSpotImages?_fxpcqlniredt=09031107111172577019';
 export const recommendParams = {
   contentType: 'json',
-  currency: 'USD',
   departureCityId: 2,
   head: {
     cid: '09031107111172577019',
@@ -15,9 +14,8 @@ export const recommendParams = {
     auth: ''
   },
   hostFrom: 'ctrip',
-  locale: 'en-US',
   saleChannelId: 7,
-  tokens: ['bkLYPLt4S6eS3cNeuWvn3KHDliEqxIIsx8H0HmMMmMS0Tz2v9zk70rLiYE8gGPm0M6QgivS0uL7EFHX1kr5CjuHtHhopGHYPNL65/4r/yu5DS3QTRUhKtpCbsCvbN/7JjiX4c+OQ9A5h7YEiqPqrcoUURiJRk9lTG1nhXpQFYx57FJ+cqaVmyz+/GWNchBp6qyQCUrwRO8Ysd0wZbxGzx1b4eUJGmK9m8H0YbzEEMkSfUU7pzDFPbxdt9dY2sctQQizU/EE5mxWpMdPMFa69BhWOuBpxaMFm05bcrML9zyfmG4oa42yLGP8nF1nQo+IBSj6/Cz8/ezHia/pQVvOrQi3qYLkqaGjM3mGir4r5pQGXIA63vZABgwPd1nNq0q13OvIw2Z8akjjfzVekoYvF/C0RVVuhP0lUrbCKonfg70XbTeTfQFsnbTsqNxzPNhQjtikIIQ==']
+  tokens: ['NqxiFVsjHaXIzAQ98SSjcENShEJ/d3iTk2cgSxv5UNfbTUeWeBPGvAKnzCIBJfxiFFd3zd/dzjxY4fld7cCLGzdL1VAxzP+7mTKmKRVNlYpPhlBZy7uQ8CbbEFH/vY/l+jLlxxZ3HWGVW2ZgjYHB9sSx8nVCLiBxrQrD1ee1SZc00hBgx/Y3wNU+enpeJda44DT4fK5s2vsrc6l+oBHQa7pnOvo3qgvXUOp15Fx8J2tNcUxeO1uhoUgYHCDL3fKeLSoWUv/epdnGZLmwB6rQTihk6yShiVby0gK04Pu881hPkVnWS8MLOfXsmh4ojlCCk7a6ZDlkRuFWTXij4U61pcslEHRtkr+8nuYJkzo0FdYHenNCj6S6Rou5DPPR6Td4TJDY4ZGsp/VHGKn4lh2dLoZJ1IMSTMtag4x6DZCRaENOyAFAxJq7/ahmNf+TVgEl8LziXQ==']
 };
 export const detailInfoParams = {
   contentType: 'json',
