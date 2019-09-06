@@ -50,7 +50,7 @@
         axios.get('https://ying-king.github.io/data-mock/ying-travel/index.json?city=' + this.city).then(this.getHomeInfoSucc);
         axios.post(recommendUrl, recommendParams).then((res) => {
           res = res.data;
-          this.recommendList = res.tokenContentList[0].productInfoList;
+          this.recommendList = res.data.popularRecommend.hotViewSpots;
           console.log(this.recommendList);
         });
       },

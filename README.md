@@ -30,7 +30,7 @@
 
 ## 3. Demo在线演示地址
 
-[旅游网站](https://ying-king.github.io/ying-travel/dist/#/home)
+[移动端旅游网站](https://ying-king.github.io/ying-travel/dist/#/home)
 
 ## 4. 致谢
 

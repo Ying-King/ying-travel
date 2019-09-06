@@ -12,11 +12,11 @@
       <router-link tag="li"
         v-for="item of list"
         :key="item.id"
-        :to="{name: 'Detail',params: {id: item.productId}}"
+        :to="{name: 'Detail',params: {id: item.id}}"
         class="item border-bottom"
       >
           <div class="item-img">
-            <img :src="item.imgUrl" alt="">
+            <img :src="item.cimgurl" alt="">
           </div>
           <p class="item-title">{{item.name}}</p>
           <div class="item-desc">
@@ -90,7 +90,7 @@
         &-img {
           overflow: hidden;
           height: 0;
-          padding-bottom: 64%;
+          padding-bottom: 100%;
 
           img {
             width: 100%;
